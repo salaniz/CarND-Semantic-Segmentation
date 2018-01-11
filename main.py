@@ -66,7 +66,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
 
     #upsampling by 2, 2, 8, see classroom
     # transpose convolution to upsample by 2
-    layer9_out = tf.layers.conv2d_transpose(layer8_conv_1x1,
+    layer9_out = tf.layers.conv2d_transpose(layer8_1x1_out,
             num_classes,    # number of feature maps
             4,              # filter size
             2,              # stride
